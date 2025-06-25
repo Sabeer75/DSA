@@ -7,6 +7,9 @@ def isPalindrome(s):
         return ss == ss[::-1]
 
 
+s = "A man, a plan, a canal: Panama"
+print(isPalindrome(s))
+
 
 
 

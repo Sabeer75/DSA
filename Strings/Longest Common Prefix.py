@@ -10,5 +10,6 @@ def Longest_Common_Prefix(strs):
             break 
     return a 
 
+
 strs = ["dog","racecar","car"]
 print(Longest_Common_Prefix(strs))

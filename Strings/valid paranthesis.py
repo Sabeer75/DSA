@@ -13,3 +13,7 @@ def isValid(s):
 
     return True if not stack else False
 #stack
+
+
+s = "()[]{}"
+print(isValid(s))
