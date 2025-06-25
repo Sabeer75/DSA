@@ -5,5 +5,4 @@ def removeConsecutiveCharacter(s):
             stack.append(i)
     return "".join(stack)
 
-s = "aabb"
-print(removeConsecutiveCharacter(s))
+#stack 

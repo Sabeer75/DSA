@@ -12,3 +12,4 @@ def isValid(s):
             stack.append(i)
 
     return True if not stack else False
+#stack
