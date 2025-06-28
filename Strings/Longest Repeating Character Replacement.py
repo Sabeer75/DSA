@@ -11,7 +11,7 @@ for r in range(len(s)):
 
     if (r - l + 1) - frequent > k:
         count[s[l]] -= 1
-        l = 1 
+        l += 1 
 
     max_len = max(r - l + 1 , max_len)
 print(max_len)
