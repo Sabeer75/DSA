@@ -1,7 +1,5 @@
-strs = ["eat","tea","tan","ate","nat","bat"]
-
 from collections import defaultdict
-
+strs = ["eat","tea","tan","ate","nat","bat"]
 dic = defaultdict(list)
 
 for word in strs:
