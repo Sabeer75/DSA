@@ -9,10 +9,13 @@ def printSequence(S):
     'T': '8',    'U': '88',   'V': '888',
     'W': '9',    'X': '99',   'Y': '999',  'Z': '9999',
     ' ': '0'}
+
     res =[]
     for i in S:
         res.append(keypad_dict[i])
     return  ''.join(res)
 
-S = "HEY U"
+
+S = "ITWASU"
 print(printSequence(S))
+
