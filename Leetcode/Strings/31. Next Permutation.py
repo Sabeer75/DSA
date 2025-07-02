@@ -1,4 +1,4 @@
-nums = [1,2,3]
+nums = [3,2,1]
 for i in range(len(nums) - 2, -1, -1):
     if nums[i] < nums[i + 1]:
         j = len(nums) - 1
