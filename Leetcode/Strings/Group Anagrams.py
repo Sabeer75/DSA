@@ -7,6 +7,7 @@ for word in strs:
     for char in word:
         key[ord(char) - ord('a')] += 1 
     dic[tuple(key)].append(word) 
+    
 print(list(dic.values()))
 
 
