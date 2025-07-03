@@ -3,6 +3,7 @@ def Longest_Common_Prefix(strs):
     strs.sort()
     first = strs[0]
     last = strs[-1]
+    
     for i in range(len(first)):
         if first[i] == last[i]:
             a += first[i]
@@ -11,5 +12,5 @@ def Longest_Common_Prefix(strs):
     return a 
 
 
-strs = ["dog","racecar","car"]
+strs = ["dog","racecar","bike"]
 print(Longest_Common_Prefix(strs))
