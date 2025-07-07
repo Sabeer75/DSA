@@ -1,3 +1,25 @@
+
+s = "abcab"
+n = len(s)
+
+print("All prefixes:")
+for i in range(1, n): 
+    prefix = ""
+    for j in range(i):
+        prefix += s[j]
+    print(prefix)
+
+print("\nAll suffixes:")
+for i in range(1, n): 
+    suffix = ""
+    for j in range(n - i, n):
+        suffix += s[j]
+    print(suffix)
+
+
+
+
+''' my code 
 from collections import defaultdict
 s = "aaaa"
 l_dict = defaultdict(int)
@@ -24,11 +46,5 @@ else:
             print(final)
         l += 1 
         r -= 1
-
-    
         
-            
-
-
-
-
+'''
