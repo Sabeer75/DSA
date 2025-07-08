@@ -8,5 +8,4 @@ for _ in range (t):
         max_gap = max(max_gap, a[i] - a[i-1])
 
     max_gap = max (max_gap,2*(x-a[-1]))
-
     print(max_gap)
