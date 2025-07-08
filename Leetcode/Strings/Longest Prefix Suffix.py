@@ -1,5 +1,6 @@
 
-s = "abcab"
+
+"""s = "abcab"
 n = len(s)
 
 print("All prefixes:")
@@ -15,9 +16,7 @@ for i in range(1, n):
     for j in range(n - i, n):
         suffix += s[j]
     print(suffix)
-
-
-
+"""
 
 ''' my code 
 from collections import defaultdict
