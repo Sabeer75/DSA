@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
     n = int(input())
-    s = input().strip()
+    s = input()
 
     if '...' in s:
         print('2')
