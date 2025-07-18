@@ -1,4 +1,4 @@
-nums = [1,2,3,4] 
+nums = [1,2,3,4,5,6,7] 
 array = [[0,0],[1,1],[0,1],[1,0]] 
 res = 0  
 for pattern in array: 
