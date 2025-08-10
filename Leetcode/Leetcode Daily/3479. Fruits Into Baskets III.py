@@ -1,6 +1,6 @@
 import math
 
-fruits = [3, 6, 1]
+fruits = [3, 6, 2]
 baskets = [6, 4, 7]
 n = len(baskets)
 m = int(math.sqrt(n))
