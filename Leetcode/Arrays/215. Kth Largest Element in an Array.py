@@ -1,4 +1,4 @@
-# Method 1
+# Method 1:
 # merge sort + index return
 def merge_sort(nums):
     if len(nums) > 1:
@@ -38,7 +38,10 @@ def findKthLargest(nums, k):
 nums = [3, 2, 1, 5, 6, 4]
 k = 2
 print(findKthLargest(nums, k))
+
+
 """
+#Method 2:
 nums = [3, 2, 1, 5, 6, 4]
 k = 2
 nums.sort()
