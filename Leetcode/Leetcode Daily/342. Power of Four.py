@@ -1,6 +1,11 @@
-class Solution:
-    def isPowerOfFour(self, n: int) -> bool:
+def isPowerOfFour(n):
+    if n <= 0:
+        print(False)
+    else:
+        while n % 4 == 0:
+            n //= 4
+    return n == 1
 
-        if n <= 0:
-            return False
-        return n.bit_length() % 2 == 1 and n.bit_count() == 1
+
+n = 24
+print(isPowerOfFour(n))
