@@ -1,4 +1,4 @@
-prices = [7, 6, 4, 3, 1]
+prices = [7, 6, 4, 3, 9]
 min_price = float("inf")
 profit = 0
 for i in prices:
