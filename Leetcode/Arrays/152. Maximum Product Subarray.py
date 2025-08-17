@@ -17,7 +17,7 @@ print(maxi)
 
 
 """
-# O(n) but 156/ 190 test case 
+# O(n) but 156/ 190 test case in leetcode 
 res = float("-inf")
 mul = 1
 for i in range(len(nums)):
