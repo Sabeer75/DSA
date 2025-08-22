@@ -1,6 +1,6 @@
 # kadanes algorithm
 nums = [-5, -4, -1, -7, -8]
-max_sum = float("-inf")
+max_sum = float("-")
 curr_sum = 0
 for i in range(len(nums)):
     curr_sum += nums[i]
