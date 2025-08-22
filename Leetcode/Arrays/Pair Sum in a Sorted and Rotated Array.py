@@ -1,31 +1,25 @@
-arr = [7, 9, 1, 3, 5]
+arr = [7, 9, 1, 3]
 target = 6
 
-n = len(arr)
 pivot = 0
-
+n = len(arr)
 for i in range(n):
     if arr[i] < arr[i - 1]:
         pivot = i
         break
-
 # 2 pointers to find pair
-
 l = pivot
 r = (pivot - 1 + n) % n
 
-found = False
 while l != r:
     if arr[l] + arr[r] == target:
         print(True)
-        found = True
-        break
-    elif arr[l] + arr[r] < target:
-        l = (l + 1) % n
-    else:
+    elif arr[l] + arr[r] > target:
         r = (r - 1 + n) % n
-if not found:
-    print(False)
+    else:
+        l = (l - 1) % n
+print(False)
+
 """
 #my solution with TLE 
 l, r = 0, len(arr) - 1
