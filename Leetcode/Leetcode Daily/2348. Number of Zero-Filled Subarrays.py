@@ -1,4 +1,4 @@
-nums = [1, 3, 0, 0, 2, 0, 0, 4]
+nums = [1, 3, 0, 0, 2, 0, 0]
 cnt, streak = 0, 0
 for num in nums:
     if num == 0:
