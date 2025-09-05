@@ -1,4 +1,4 @@
-matrix = [[0, 1, 1, 1], [1, 1, 1, 1], [0, 1, 1, 0]]
+matrix = [[0, 1, 1, 1], [1, 1, 1, 1], [0, 1, 1, 1]]
 row, col = len(matrix), len(matrix[0])
 dp = [[0] * (col + 1) for _ in range(row + 1)]
 ans = 0
