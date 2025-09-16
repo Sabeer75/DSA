@@ -2,6 +2,7 @@ matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
 rows, cols = len(matrix), len(matrix[0])
 row_zero = False
 
+# if a row or coloumn has o in it then the first row and column value is changed to 0 except the matrix[0][0]
 for r in range(rows):
     for c in range(cols):
         if matrix[r][c] == 0:
@@ -11,15 +12,18 @@ for r in range(rows):
             else:
                 row_zero = True
 
+# checking which row or column has zero and changing all the elements in rows and columns to 0
 for r in range(1, rows):
     for c in range(1, cols):
         if matrix[0][c] == 0 or matrix[r][0] == 0:
             matrix[r][c] = 0
 
+# dealing with the special case matrix[0][0] column
 if matrix[0][0] == 0:
     for r in range(rows):
         matrix[r][0] = 0
 
+# dealing with the special case matrix[0][0] row
 if row_zero:
     for c in range(cols):
         matrix[0][c] = 0
