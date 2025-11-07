@@ -1,27 +1,21 @@
-s = "babad"
-max_len = 0 
-max_words = ""
+s = "babadjaehfjabefj"
+max_len = 0
+max_word = ""
 
 for i in range(len(s)):
-    #odd 
-    l , r = i, i 
+    l, r = i, i
     while l >= 0 and r < len(s) and s[l] == s[r]:
-        if (r-l+1) > max_len:
-            max_len = r-l+1
-            max_words = s[l:r+1]
+        if (r - l + 1) > max_len:
+            max_len = r - l + 1
+            max_word = s[l : r + 1]
         l -= 1
-        r += 1 
+        r += 1
 
-    #even 
-    l , r = i , i +1
+    l, r = i, i + 1
     while l >= 0 and r < len(s) and s[l] == s[r]:
-        if (r-l+1) > max_len:
-            max_len = r-l+1
-            max_words = s[l:r+1]
+        if (r - l + 1) > max_len:
+            max_len = r - l + 1
+            max_word = s[l : r + 1]
         l -= 1
-        r += 1 
-print(max_words)
-
-
-
-        
+        r += 1
+print(max_word)
