@@ -17,6 +17,7 @@ head = node1
 
 curr = head
 # reverse the linked list
+
 prev = None
 
 while curr:
@@ -25,7 +26,7 @@ while curr:
     prev = curr
     curr = temp
 
-curr = prev
-while curr:
-    print(curr.data, end="-->")
-    curr = curr.next
+while prev:
+    print(prev.data, end="-->")
+    prev = prev.next
+print("None")
