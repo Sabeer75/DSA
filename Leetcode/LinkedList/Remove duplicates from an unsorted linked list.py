@@ -32,5 +32,5 @@ curr = head
 while curr:
     print(curr.data, end="->")
     curr = curr.next
-
 print("None")
+# 15 -- > 14 -- > 9 -->
