@@ -1,15 +1,14 @@
-nums = [4,5,4]
-conv = []
-for i in nums:
-    b = bin(i)[2:]
-    print(b)
-    conv.append('0b' + b[::-1])
+lis = [1,2,3,4,5]
+l = 0 
+r = len(lis)-1 
+res = []
+while l <= r:
+    if l == r:
+        res.append(lis[l])
+    else:
+        res.append(lis[l])
+        res.append(lis[r])
+        l += 1 
+        r -= 1
 
-conv.sort()
-print(conv)
-
-final = []
-for i in conv:
-    b = int(i[2:][::-1],2)
-    final.append(b)
-print(final)
+print(res)
