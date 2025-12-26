@@ -1,26 +1,44 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
 class Solution:
-    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        order = []
-        for head in lists:
-            curr = head
-            while curr:
-                order.append(curr.val)
-                curr = curr.next
+    def addTwoNumbers(self, l1, l2):
+        val1 = []
+        val2 = []
 
-        if not order:
-            return None
+        while l1:
+            val1.append(l1.val)
+            l1 = l1.next
+        while l2:
+            val2.append(l2.val)
+            l2 = l2.next
 
-        order.sort()
+        v1 = int("".join(map(str, val1[::-1])))
+        v2 = int("".join(map(str, val2[::-1])))
 
-        head = ListNode(order[0])
-        curr = head
+        total = v1 + v2
 
-        for i in order[1:]:
-            curr.next = ListNode(i)
-            curr = curr.next
+        head = None
+        tail = None
+
+        if total == 0:
+            return ListNode(0)
+
+        while total > 0:
+            i = total % 10
+
+            total //= 10
+
+            new_node = ListNode(i)
+
+            if head is None:
+                head = new_node
+                tail = new_node
+            else:
+                tail.next = new_node
+                tail = new_node
+
         return head
