@@ -1,20 +1,19 @@
-nums = [4, 5, 6, 7, 0, 1, 2]
-target = 0
-l, r = 0, len(nums) - 1
+gas = [4, 5, 7, 4]
+cost = [6, 6, 3, 5]
 
-while l <= r:
-    m = (l + r) // 2
+if sum(gas) < sum(cost):
+    print(-1)
+start = 0
+for start in range(len(gas)):
+    if gas[start] > cost[start]:
+        j = (start + 1) % len(gas)
+        available_gas = 0
+        while j != start:
+            available_gas = gas[start] - cost[start]
+            if available_gas + gas[j] > cost[j]:
+                available_gas = available_gas + gas[j] - cost[j]
+                j = (j + 1) % len(gas)
+            break
 
-    if nums[m] == target:
-        print(m)
-    if nums[l] <= nums[m]:
-        if nums[l] <= target < nums[m]:
-            r = m - 1
         else:
-            l = m + 1
-    else:
-        if nums[m] < target <= nums[r]:
-            l = m + 1
-        else:
-            r = m - 1
-print(-1)
+            print(start)
