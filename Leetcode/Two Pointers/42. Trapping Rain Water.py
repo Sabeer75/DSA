@@ -28,3 +28,29 @@ for i in range(len(height)-1):
     max_water += min(prefix[i],suffix[i]) - height[i] 
 
 print(max_water)
+
+"""
+optimised 
+nums = [0,1,0,2,1,0,1,3,2,1,2,1]
+
+l_max = float('-inf')
+r_max = float('-inf')
+total = 0 
+
+l= 0 
+r = len(nums) - 1 
+while l < r:
+    if nums[l] <= nums[r]:
+        if l_max > nums[l]: 
+            total += l_max - nums[l]
+        else:
+            l_max = nums[l]
+        l += 1 
+    else:
+        if r_max > nums[r]:
+            total += r_max - nums[r]
+        else:
+            r_max = nums[r]
+        r -= 1 
+print(total)
+"""
