@@ -1,19 +1,32 @@
-def magic(root):
-    count = 0 
-    def dfs(node):
-        nonlocal count
-        if node is None:
-            return 0 
+t = int(input())
 
-        if node.left is None and node.right is None:
-            return 1 
+for _ in range(t):
+    grid = []
 
-        left = dfs(node.left)
-        right = dfs(node.right)
+    for i in range(10):
+        rows = input()
+        grid.append(rows)
 
-        if (left!=0 and right != 0) and (left%2) != (right % 2):
-            count += 1 
-        return left + right + 1
-    dfs(root)
-    return count 
-        
+
+    score1 = [
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+        [1, 2, 3, 3, 3, 3, 3, 3, 2, 1],
+        [1, 2, 3, 4, 4, 4, 4, 3, 2, 1],
+        [1, 2, 3, 4, 5, 5, 4, 3, 2, 1],
+        [1, 2, 3, 4, 5, 5, 4, 3, 2, 1],
+        [1, 2, 3, 4, 4, 4, 4, 3, 2, 1],
+        [1, 2, 3, 3, 3, 3, 3, 3, 2, 1],
+        [1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    ]
+
+    rows = len(grid)
+    cols = len(grid[0])
+    score = 0 
+    for i in range(rows):
+        for j in range(cols):
+            if grid[i][j] == 'X':
+                score += score1[i][j]
+
+    print(score)
